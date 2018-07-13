@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 224968981148375210}
   - component: {fileID: 33229470644078136}
   - component: {fileID: 23822792560965542}
+  - component: {fileID: 65001930813264686}
+  - component: {fileID: 114809762450003430}
   m_Layer: 5
   m_Name: CubeTemplate
   m_TagString: Untagged
@@ -70,6 +72,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1566078690780716}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65001930813264686
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1566078690780716}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114809762450003430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1566078690780716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817c0abdd826403489cc8a5b0e11a206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: {x: 0, y: 0, z: 0}
 --- !u!224 &224968981148375210
 RectTransform:
   m_ObjectHideFlags: 1

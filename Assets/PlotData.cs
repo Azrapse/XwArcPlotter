@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class PlotData : MonoBehaviour
 {
-    public GameObject dotObjectTemplate;
+    public DotInfo dotObjectTemplate;
     public float dotScale = 1;
     public float maxPositiveCoordAxisValue = 65536f;
     public float maxPositivePlotAxisValue = 150f;
@@ -74,10 +74,11 @@ public class PlotData : MonoBehaviour
         for (int i = 0; i < dataPoints.Length; i++)
         {
             var point = dataPoints[i] / maxPositiveCoordAxisValue * maxPositivePlotAxisValue;
-            var dot = Instantiate(dotObjectTemplate, point, Quaternion.identity);
+            var dot = Instantiate<DotInfo>(dotObjectTemplate, point, Quaternion.identity);
             dot.transform.localScale = new Vector3(dotScale, dotScale, dotScale);
             dot.name = "DotObject";
             dot.tag = "DotObject";
+            dot.point = dataPoints[i];
         }        
     }
 
